@@ -152,14 +152,15 @@ function PersonalInfo({ formData, updateFormData, nextStep }) {
 
             <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Current Password{formData.newPassword ? ' *' : ''}
+                    Current Password*{formData.newPassword ? ' *' : ''}
                 </label>
                 <input
                     type="password"
                     value={formData.currentPassword}
                     onChange={(e) => updateFormData({ currentPassword: e.target.value })}
+                    required
                     className="border rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder={formData.newPassword ? 'Required to change password' : 'Leave blank if no change'}
+                    placeholder={formData.newPassword ? 'Required to change password' : 'Enter current password'}
                 />
             </div>
 
